@@ -11,7 +11,7 @@ import static com.codeborne.selenide.Selenide.*;
 public class ToolsQA {
 
     @BeforeAll
-    static public void BeforeAll(){
+    static public void beforeAll(){
         Configuration.browserSize = "1920x1080";
         open("https://demoqa.com/automation-practice-form");
     }
@@ -21,15 +21,15 @@ public class ToolsQA {
         $("#firstName").setValue("Evgeny");
         $("#lastName").setValue("Сhuprov");
         $("#userEmail").setValue("myemail@mail.my");
-        $("[for='gender-radio-1']").click();
+        $("#genterWrapper").$(byText("Male")).click();
         $("#userNumber").setValue("1234567890");
         $("#dateOfBirthInput").click();
         $(".react-datepicker__month-select").selectOption("February");
         $(".react-datepicker__year-select").selectOption("1985");
         $(".react-datepicker__day--023").click();
         $("#subjectsInput").setValue("Math").pressEnter();
-        $("[for='hobbies-checkbox-1']").click();
-        $("[for='hobbies-checkbox-3']").click();
+        $("#hobbiesWrapper").$(byText("Sports")).click();
+        $("#hobbiesWrapper").$(byText("Music")).click();
         $("#uploadPicture").uploadFile(new File("src/test/resources/1.png"));
         $("#currentAddress").setValue("Some kind of address");
         $("#state").click();
