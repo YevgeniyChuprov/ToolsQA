@@ -47,7 +47,7 @@ public class PersonalData {
     }
 
     public PersonalData uploadFile(String value){
-        $("#uploadPicture").uploadFile(new File(value));
+        $("#uploadPicture").uploadFile(new File(String.format("src/test/resources/%s", value)));
         return this;
     }
 
