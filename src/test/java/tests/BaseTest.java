@@ -23,6 +23,11 @@ public class BaseTest {
         capabilities.setCapability("enableVNC", true);
         capabilities.setCapability("enableVideo", true);
         Configuration.browserCapabilities = capabilities;
+        open("/automation-practice-form");
+
+        Configuration.browserSize = "1920x1080";
+        open("/automation-practice-form");
+
     }
 
     @BeforeEach
