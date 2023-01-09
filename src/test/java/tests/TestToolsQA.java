@@ -1,8 +1,6 @@
 package tests;
 
-import com.codeborne.selenide.Configuration;
 import com.github.javafaker.Faker;
-import io.qameta.allure.Description;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import pages.ModalForm;
